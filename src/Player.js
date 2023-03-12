@@ -4,12 +4,11 @@ const Player = (name, mark) => {
     const getName = () => name;
 
     const play = () => {
-        let playerChoice = "";
-        // logic
+        let playerChoice = prompt("Choose a cell to place your mark (1-9)", "0");
         return playerChoice;
     }
 
     return {getMark, getName, play};
 }
 
-export {Player};
+export default Player;
