@@ -1,8 +1,8 @@
 const Cell = function () {
     let mark;
 
-    const addMark = (player) => {
-        mark = player.getMark();
+    const addMark = (playerMark) => {
+        mark = playerMark;
     }
 
     const getMark = () => mark;
