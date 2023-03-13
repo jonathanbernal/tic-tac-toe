@@ -1,5 +1,5 @@
 const Cell = function () {
-    let mark = "";
+    let mark;
 
     const addMark = (player) => {
         mark = player.getMark();
@@ -10,4 +10,4 @@ const Cell = function () {
     return {addMark, getMark};
 }
 
-export {Cell};
+export default Cell;
