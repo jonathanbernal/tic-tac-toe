@@ -3,8 +3,6 @@ import Cell from './Cell';
 const Gameboard = function () {
     const ROW_SIZE = 3;
     const COLUMN_SIZE = 3;
-    const PLAYER_MARK_PLACEMENT_SUCCESS = 0;
-    const PLAYER_MARK_PLACEMENT_ERROR = -1;
     let board = [];
 
     const positionMap = {
@@ -43,14 +41,14 @@ const Gameboard = function () {
      * 
      * @param {*} playerMark the player's assigned mark
      * @param {*} cellPosition A position value between 1 and 9 on the board to place the mark on.
-     * @returns the operation status. 0 if successful, -1 otherwise
+     * @returns the operation status. True if successful, false otherwise
      */
     const placePlayerMark = (playerMark, cellPosition) => {
         if (isCellAtPositionEmpty(cellPosition)) {
             board[positionMap[cellPosition].x][positionMap[cellPosition].y].addMark(playerMark);
-            return PLAYER_MARK_PLACEMENT_SUCCESS;
+            return true;
         }
-        return PLAYER_MARK_PLACEMENT_ERROR;
+        return false;
     };
 
     const printBoard = () => {

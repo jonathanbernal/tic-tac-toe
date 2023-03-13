@@ -20,13 +20,13 @@ describe('Tests for the Gameboard object', ()=>{
         const testPlayer = Player('Player3', 'O');
         const positionToPlaceMarkIn = 4;
         expect(gameboard.placePlayerMark(testPlayer.getMark(), positionToPlaceMarkIn))
-            .toEqual(0);
+            .toBe(true);
     });
     test('Placing another mark again on the 4th position should not be successful', ()=>{
         const testPlayer = Player('Player1', 'X');
         const positionToPlaceMarkIn = 4;
         expect(gameboard.placePlayerMark(testPlayer.getMark(), positionToPlaceMarkIn))
-            .toEqual(-1);
+            .toBe(false);
     });
     test('The argument cell should be empty (1-9)', ()=>{
         expect(gameboard.isCellAtPositionEmpty(1)).toBe(true);
