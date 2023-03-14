@@ -61,11 +61,17 @@ const Gameboard = function () {
         console.log(boardString);
     }
 
-    initializeBoard();
+    const getMarkAtPosition = (position) => {
+        return board[positionMap[position].x][positionMap[position].y].getMark();
+    }
+
     const getBoard = () => board;
+
+    initializeBoard();
 
     return {
         getBoard,
+        getMarkAtPosition,
         placePlayerMark,
         printBoard,
         isCellAtPositionEmpty,

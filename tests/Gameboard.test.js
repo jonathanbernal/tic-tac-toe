@@ -14,7 +14,7 @@ describe('Tests for the Gameboard object', ()=>{
         // to 2D array coordinates in the form (x,y).
         const positionToPlaceMarkIn = 5;
         gameboard.placePlayerMark(testPlayer.getMark(), positionToPlaceMarkIn);
-        expect(gameboard.getBoard()[1][1].getMark()).toBe('X');
+        expect(gameboard.getMarkAtPosition(positionToPlaceMarkIn)).toBe('X');
     });
     test('Placing a mark on the 4th position should be successful', ()=>{
         const testPlayer = Player('Player3', 'O');
