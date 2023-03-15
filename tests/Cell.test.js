@@ -5,8 +5,8 @@ const testPlayer = Player('Player1', 'X');
 const testCell = Cell();
 
 describe('Tests for the Cell object', ()=>{
-    test('New Cell should have an undefined mark', ()=>{
-        expect(Cell().getMark()).toBeUndefined();
+    test('New Cell should have an empty mark', ()=>{
+        expect(Cell().getMark()).toEqual(' ');
     });
     test('mark prop should be private', ()=>{
         expect(testCell.mark).toBeUndefined();

@@ -1,5 +1,5 @@
 const Cell = function () {
-    let mark;
+    let mark = ' ';
 
     const addMark = (playerMark) => {
         mark = playerMark;

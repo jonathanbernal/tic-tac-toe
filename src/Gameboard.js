@@ -34,7 +34,7 @@ const Gameboard = function () {
      */
     const isCellAtPositionEmpty = (cellPosition) => {
         let mark = board[positionMap[cellPosition].x][positionMap[cellPosition].y].getMark();
-        return mark === undefined;
+        return mark === ' ';
     }
 
     /**
@@ -75,6 +75,7 @@ const Gameboard = function () {
         placePlayerMark,
         printBoard,
         isCellAtPositionEmpty,
+        positionMap,
     };
 }
 
