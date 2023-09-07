@@ -1,37 +1,26 @@
 {
   "name": "tic-tac-toe",
-  "version": "1.0.0",
-  "description": "A tic-tac-toe implementation using vanilla JS",
-  "private": "true",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "jest",
-    "build": "webpack",
-    "dev": "webpack serve --open"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jonathanbernal/tic-tac-toe.git"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "author": "Jonathan Bernal",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/jonathanbernal/tic-tac-toe/issues"
-  },
-  "homepage": "https://github.com/jonathanbernal/tic-tac-toe#readme",
   "devDependencies": {
-    "@babel/cli": "^7.21.0",
-    "@babel/core": "^7.21.0",
-    "@babel/preset-env": "^7.20.2",
-    "babel-jest": "^29.5.0",
-    "babel-loader": "^9.1.2",
-    "css-loader": "^6.7.3",
-    "html-webpack-plugin": "^5.5.0",
-    "jest": "^29.5.0",
-    "sass": "^1.59.2",
-    "sass-loader": "^13.2.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.76.1",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.5"
   }
 }

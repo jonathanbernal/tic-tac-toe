@@ -1,4 +1,4 @@
-import Cell from './Cell';
+import Cell from '../../src/Cell';
 
 const Gameboard = function () {
     const ROW_SIZE = 3;
