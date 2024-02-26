@@ -11,9 +11,9 @@ import PlayerSetup from './PlayerSetup';
 import Gameboard from './Gameboard';
 
 export default function GameController() {
-  const [isPlayerOneTurn, setIsPlayerOneTurn] = useState( true ); // Player 1 always goes first
-  const [isGameReady, setIsGameReady] = useState( true ); // Game is ready once both players have selected their name and mark
+  const [isGameReady, setIsGameReady] = useState( false ); // Game is ready once both players have selected their name and mark
   const [gameboardState, setGameboardState] = useState( Array(9) );
+  const Players = []; // PlayerSetup is responsible for instantiating the players
   const winningCombinations = [
     // horizontal combinations
     [0, 1, 2],
@@ -30,9 +30,9 @@ export default function GameController() {
 
   return (
     <div>
-        { !isGameReady && <PlayerSetup/> }
-        { isGameReady && <Gameboard gameboardState={gameboardState}/> }
+        { !isGameReady && <PlayerSetup players={ Players }/> }
+        { isGameReady && <Gameboard gameboardState={ gameboardState }/> }
     </div>
   )
-};
+}
 
