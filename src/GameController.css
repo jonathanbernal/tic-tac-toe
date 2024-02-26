@@ -5,7 +5,7 @@
   text-align: center;
 
   display: grid;
-  place-content: center;
+  grid-template-rows: 1fr 5fr 0.3fr;
 }
 
 .gameboard {
